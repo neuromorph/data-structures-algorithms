@@ -37,7 +37,7 @@ class Graph:
             return 1
           
     def astar(self, start_vertex, target_vertex):
-        ## D: dict of nodes and their shortest distances from start node
+        ## D: dict of nodes with their dist to target = shortest distance of the node from the start node + heuristic of dist from the node to the target
         D = {v:float('inf') for v in range(self.v)}
         D[start_vertex] = 0 + self.h(start_vertex, target_vertex)
         
